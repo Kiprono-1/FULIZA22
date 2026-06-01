@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-safaricom-50: #ecf7e9;
+  --color-safaricom-100: #d2edcb;
+  --color-safaricom-200: #a5db97;
+  --color-safaricom-300: #78c963;
+  --color-safaricom-400: #4cb430;
+  --color-safaricom-500: #3aa335;
+  --color-safaricom-600: #2d8a2a;
+  --color-safaricom-700: #1f6820;
+  --color-safaricom-800: #144515;
+  --color-safaricom-900: #0a220b;
+  --color-fuliza-500: #e11833;
+  --color-fuliza-600: #b91429;
+}
+
+* { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body { background: #ffffff; color: #0a220b; }
+
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f1; }
+::-webkit-scrollbar-thumb { background: #a5db97; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #78c963; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { animation: fadeUp 0.4s ease-out; }
+
+@keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+.pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.spin-slow { animation: spin-slow 1s linear infinite; }
+
+.gradient-safaricom { background: linear-gradient(135deg, #1f6820 0%, #3aa335 50%, #4cb430 100%); }
+.gradient-fuliza { background: linear-gradient(135deg, #b91429 0%, #e11833 100%); }
+.text-gradient {
+  background: linear-gradient(135deg, #1f6820, #3aa335);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-dark {
+  background: rgba(10, 34, 11, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hero-pattern {
+  background-color: #ecf7e9;
+  background-image:
+    radial-gradient(at 20% 20%, rgba(60, 163, 53, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 30%, rgba(225, 24, 51, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(60, 163, 53, 0.12) 0px, transparent 50%);
+}
+
+.safaricom-card-bg {
+  background: linear-gradient(135deg, #0a220b 0%, #144515 50%, #1f6820 100%);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(60, 163, 53, 0.4) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(225, 24, 51, 0.2) 0px, transparent 40%),
+    linear-gradient(135deg, #0a220b 0%, #144515 50%, #1f6820 100%);
+}
